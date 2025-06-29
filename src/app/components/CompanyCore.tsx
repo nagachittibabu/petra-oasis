@@ -45,7 +45,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import Image from "next/image";
 import "aos/dist/aos.css";
-import { corevalues } from "../src/app/export";
+import { corevalues } from "../export";
 
 type CoreValueItem = {
     image: string;

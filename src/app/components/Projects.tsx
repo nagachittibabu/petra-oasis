@@ -42,7 +42,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import Image from "next/image";
 import "aos/dist/aos.css";
-import { projects } from "../src/app/export";
+import { projects } from "../export";
 
 // Define type for a project
 type ProjectItem = {
