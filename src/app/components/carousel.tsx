@@ -18,7 +18,7 @@ const HomeCarousel = () => {
   }, [])
 
   return (
-    <div className={`w-full h-[500px] relative transform transition-all duration-700 ease-out ${animate ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
+    <div className={`w-full h-[300px] lg:h-[500px] md:h-[400px] sm:h-[300px]  relative transform transition-all duration-700 ease-out ${animate ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
       }`}>
       <Carousel
         autoPlay
