@@ -2,19 +2,19 @@ export const ourpromises = [
     {
         'image': '/promisecard1.png',
         'title': 'Our Promise as a contractor is to build your project',
-        'desc': 'The process of commercial building construction involves designing, planning, and constructing buildings intended for commercial use. These structures serve various purposes, such as retail stores, office buildings and educational institutions.',
+        'description': 'The process of commercial building construction involves designing, planning, and constructing buildings intended for commercial use. These structures serve various purposes, such as retail stores, office buildings and educational institutions.',
         'label': 'Read More'
     },
     {
         'image': '/promisecard1.png',
         'title': 'Professional Homes Constructions',
-        'desc': 'The construction process includes several stages: site selection and preparation, architectural design, engineering, material procurement, actual construction, and commissioning.',
+        'description': 'The construction process includes several stages: site selection and preparation, architectural design, engineering, material procurement, actual construction, and commissioning.',
         'label': 'Read More'
     },
     {
         'image': '/promisecard1.png',
         'title': 'Architecture Design',
-        'desc': 'Collaboration among professionals—such as architects, engineers, contractors, and subcontractors—is crucial to ensure compliance with local building codes and regulations.',
+        'description': 'Collaboration among professionals—such as architects, engineers, contractors, and subcontractors—is crucial to ensure compliance with local building codes and regulations.',
         'label': 'Read More'
     },
 ]

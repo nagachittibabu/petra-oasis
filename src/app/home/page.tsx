@@ -1,12 +1,19 @@
 import React from 'react'
-import Image from '../../../node_modules/next/image'
 import HomeCarousel from '../components/carousel'
+import CoreValueSection from '../components/corevalueSection'
+import ProjectSection from '../components/projectSection'
+import PromiseSection from '../components/promiseSection'
+import ContactPage from '../contact-us/page'
 
 const HomePage = () => {
-    
+
   return (
-    <div className='w-full h-full flex justify-between items-center '>
-        <HomeCarousel />
+    <div className='w-full h-full  '>
+      <HomeCarousel />
+      <PromiseSection />
+      <CoreValueSection />
+      <ProjectSection />
+      <ContactPage />
     </div>
   )
 }
