@@ -1,9 +1,10 @@
 import React from 'react'
 import HomeCarousel from '../components/carousel'
+import ContactSection from '../components/contactSection'
 import CoreValueSection from '../components/corevalueSection'
 import ProjectSection from '../components/projectSection'
 import PromiseSection from '../components/promiseSection'
-import ContactPage from '../contact-us/page'
+import TeamSection from '../components/TeamSection'
 
 const HomePage = () => {
 
@@ -13,7 +14,8 @@ const HomePage = () => {
       <PromiseSection />
       <CoreValueSection />
       <ProjectSection />
-      <ContactPage />
+      <TeamSection />
+      <ContactSection />
     </div>
   )
 }

@@ -9,15 +9,17 @@ interface PromiseCardProps {
   const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description }) => {  
   return (
     <div
-            className="flex flex-col justify-between items-center bg-white p-6 sm:p-8 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105"
+            className="h-[550px] flex flex-col justify-between items-center bg-white p-6 sm:p-8 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105"
           >
+            <div className='w-full h-[40%]'>
             <Image
               src={imageurl}
               alt="promise image"
               width={300}
               height={200}
-              className="w-full h-[200px] object-cover rounded-lg mb-4"
+              className="w-full h-full object-cover rounded-lg mb-4"
             />
+            </div>
             <h2 className="text-lg sm:text-xl font-semibold text-black text-center">
               {title}
             </h2>

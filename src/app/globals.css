@@ -7,11 +7,11 @@
 }
 
 body {
-  background-color: rgb(229, 226, 226);
+  background-color: rgb(243, 242, 242);
 }
 
 * {
-  transition: 1s ease;
+  transition: .5s ease;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -44,12 +44,11 @@ body {
   animation: slidedown .3s ease forwards;
   animation-delay: .7s
 }
-
+.more_features div a{
+  font-size: 14px;
+}
 .navbar a:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  color: rgb(9, 91, 179);
-  text-decoration-color: orange;
+  color: rgb(222, 187, 122)
 }
 
 .companylogo {
@@ -64,6 +63,10 @@ body {
 
 .slide-right {
   animation: slideright .5s ease-out forwards;
+}
+
+.slide-down{
+  animation: slidedown 0.7s ease-in-out forwards;
 }
 
 @keyframes slidedown {
@@ -90,6 +93,17 @@ body {
   }
 }
 
+.read_more{
+  background-color:  rgb(244, 167, 24);
+  color: rgb(12, 12, 37);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.read_more:hover{
+  box-shadow: 0px 1px 5px  white;
+  scale: 1.1;
+}
 @keyframes slideleft {
   0% {
     transform: translateX(100px);
@@ -102,7 +116,7 @@ body {
   }
 }
 
-@media (width<641px) {
+@media (width < 641px) {
   * {
     transition: 0.5s ease
   }
@@ -140,7 +154,6 @@ body {
 
   .navbar a:hover {
     background-color: rgb(154, 188, 247);
-    ;
     text-decoration: none;
   }
 
@@ -148,7 +161,6 @@ body {
     width: 100%;
     padding-left: 25px;
     background-color: rgb(131, 169, 235);
-    ;
   }
 
   .more_features div {
@@ -206,4 +218,16 @@ body {
     padding: 0 2px 0 2px;
     font-size: 12px;
   }
+}
+
+
+#promises{
+  background-image: url("https://images.unsplash.com/photo-1702300731773-18e3365af5e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGJlYXV0aWZ1bCUyMGJ1aWxkaW5nfGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;  
+}
+#contact{
+  background-image: url("https://www.petraoasis.com/images/contact-with-petraoasis.webp");
+  background-size: cover;
+  background-position: center;  
 }
