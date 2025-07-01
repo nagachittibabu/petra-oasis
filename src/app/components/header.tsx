@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full h-[100px] flex justify-evenly border bg-white z-50">
+    <header className="w-full h-[100px] flex justify-evenly  bg-transparent absolute left-0 top-0 z-50 text-white">
       <div className="w-1/4 h-full flex items-center justify-start companylogo">
         <a href="/">
           <img
@@ -42,7 +42,7 @@ const Header = () => {
 
       {isNavVisible && (
         <nav
-          className="navbar w-3/4 h-full flex lg:space-x-18 md:space-x-12 sm:space-x-8 justify-center items-center lg:text-[17px] md:text-[12px] sm:text-[12px] text-gray-800 font-semibold"
+          className="navbar w-3/4 h-full flex lg:space-x-18 md:space-x-12 sm:space-x-8 justify-center items-center lg:text-[17px] md:text-[12px] sm:text-[12px] text-white font-semibold"
             onMouseLeave={() => setMoreDetails(false)}
             id="navbar" 
         >
@@ -51,11 +51,11 @@ const Header = () => {
               &times;
             </button>
           )}
-          <a href="/" style={{ "--delay": 1 } }>HOME</a>
-          <a href="" style={{ "--delay": 2 } }>ABOUT US</a>
-          <a href="" style={{ "--delay": 3 } }>SERVICES</a>
-          <a href="" style={{ "--delay": 4 } }>PROJECT</a>
-          <a href="" style={{ "--delay": 5 } }>CONTACT-US</a>
+          <a href="/" style={{ "--delay": 1 } as React.CSSProperties} >HOME</a>
+          <a href="" style={{ "--delay": 2 }as React.CSSProperties}>ABOUT US</a>
+          <a href="" style={{ "--delay": 3 }as React.CSSProperties}>SERVICES</a>
+          <a href="" style={{ "--delay": 4 }as React.CSSProperties}>PROJECT</a>
+          <a href="/contact-us" style={{ "--delay": 5 }  as React.CSSProperties}>CONTACT-US</a>
 
           <div
             className="more_features relative "
@@ -64,7 +64,7 @@ const Header = () => {
             <button className="mr-0 pr-2 " onClick={()=>setMoreDetails(!moreDetails)}>MORE</button>
             <i className={moreDetails ? "bx bx-chevron-up" : "bx bx-chevron-down"}></i>
             {moreDetails && (
-              <div className="w-max absolute top-full mt-2 flex flex-col bg-white rounded p-2 shadow-md space-y-4 text-[inherit] right-0 lg:left-0 md:right-0 sm:right-0 ">
+              <div className="w-max absolute top-full mt-2 flex flex-col bg-white rounded p-2 shadow-md space-y-4 text-[inherit] right-0 lg:right-[-150] md:right-0 sm:right-0  text-black">
                 <a href="" >GROUPS</a>
                 <a href="">PRE-CAST</a>
                 <a href="">COMMITMENT TO QUALITY</a>

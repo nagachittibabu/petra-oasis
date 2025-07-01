@@ -6,7 +6,7 @@ export const ourpromises = [
         'label': 'Read More'
     },
     {
-        'image': '/promisecard1.png',
+        'image': '/images/park.png',
         'title': 'Professional Homes Constructions',
         'description': 'The construction process includes several stages: site selection and preparation, architectural design, engineering, material procurement, actual construction, and commissioning.',
         'label': 'Read More'
@@ -48,34 +48,34 @@ export const corevalues = [
 
 export const projects = [
     {
-        'image': '/target.png',
+        'image': '/images/commercial-building.png',
         'title': 'Commercial',
         'about': 'These structures serve various purposes, such as retail stores, office buildings, warehouses, hotels, hospitals, and educational institutions.'
 
     },
     {
-        'image': '/target.png',
+        'image': '/images/residential.png',
         'title': 'Residential',
         'about': 'Residential construction involves building homes, apartments, and other dwellings. It’s a dynamic industry shaping our living spaces globally.'
     },
     {
-        'image': '/target.png',
+        'image': '/images/industrial.png',
         'title': 'Industrial',
         'about': 'Industrial properties cater to manufacturing, warehousing, and logistics needs Examples: factories, distribution centers, and industrial parks.'
     },
     {
-        'image': '/target.png',
+        'image': '/images/educational.png',
         'title': 'Educational',
         'about': 'Educational properties serve learning institutions. Examples: schools, colleges, and universities.'
 
     },
     {
-        'image': '/target.png',
+        'image': '/images/hospital.png',
         'title': 'Hospitality',
         'about': 'Hospitality properties provide lodging, dining, and leisure services. Examples: hotels, restaurants, and resorts.'
     },
     {
-        'image': '/target.png',
+        'image': '/images/medical.png',
         'title': 'Medical',
         'about': 'Medical properties support healthcare services. Examples: hospitals, clinics, and medical office buildings.'
     },
@@ -99,3 +99,21 @@ export const contact = [
     }
 ]
 
+
+export const Persons=[
+    {
+        "imageurl":"/images/companylogo.png",
+        "name":"Er. A K Ayube",
+        "specialization":"B.tech(Civil),M.tech(structure)"
+    },
+    {
+        "imageurl":"",
+        "name":"Er. A K ",
+        "specialization":"B.tech(Civil),M.tech(structure)"
+    },
+    {
+        "imageurl":"",
+        "name":"Er. A K A",
+        "specialization":"B.tech(Civil),M.tech(structure)"
+    }
+]
