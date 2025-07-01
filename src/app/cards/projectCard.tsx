@@ -27,4 +27,4 @@ interface ProjectCardProps {
   )
 }
 
-export default ProjectCard
+export default ProjectCard;
