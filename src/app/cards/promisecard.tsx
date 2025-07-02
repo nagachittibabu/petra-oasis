@@ -33,4 +33,4 @@ interface PromiseCardProps {
   )
 }
 
-export default PromiseCard
+export default PromiseCard;

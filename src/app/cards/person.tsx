@@ -18,4 +18,4 @@ const Person:React.FC<PersonCardProps>= ({imageurl,name,specialization}) => {
   )
 }
 
-export default Person
+export default Person;

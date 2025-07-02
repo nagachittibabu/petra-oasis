@@ -1,5 +1,8 @@
-import React from 'react'
-import Image from '../../../node_modules/next/image'
+
+
+import Image from 'next/image';
+import React from 'react';
+
 interface CoreValueCardProps {
     imageurl: string;
     title: string;
@@ -24,8 +27,9 @@ interface CoreValueCardProps {
     </h2>
 
     <p className="text-center text-sm text-gray-600 mb-4">{description}</p>
+    
 </div>
   )
 }
 
-export default CoreValueCard
+export default CoreValueCard;

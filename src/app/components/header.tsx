@@ -52,8 +52,8 @@ const Header = () => {
             </button>
           )}
           <a href="/" style={{ "--delay": 1 } as React.CSSProperties} >HOME</a>
-          <a href="" style={{ "--delay": 2 }as React.CSSProperties}>ABOUT US</a>
-          <a href="" style={{ "--delay": 3 }as React.CSSProperties}>SERVICES</a>
+          <a href="/about-us" style={{ "--delay": 2 } as React.CSSProperties}>ABOUT US</a>
+          <a href="/services" style={{ "--delay": 3 } as React.CSSProperties}>SERVICES</a>
           <a href="" style={{ "--delay": 4 }as React.CSSProperties}>PROJECT</a>
           <a href="/contact-us" style={{ "--delay": 5 }  as React.CSSProperties}>CONTACT-US</a>
 
