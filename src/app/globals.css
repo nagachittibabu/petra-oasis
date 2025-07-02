@@ -1,8 +1,18 @@
 @import "tailwindcss";
+@import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+body {
+  background-color: rgb(243, 242, 242);
+}
+
+* {
+  transition: .5s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @theme inline {
@@ -19,8 +29,205 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.navbar a {
+  text-decoration: none;
+  transition: .3s;
+  opacity: 0;
+  animation: slidedown .3s ease-in forwards;
+  animation-delay: calc(.1s*var(--delay))
+}
+
+.more_features {
+  transition: .3s;
+  z-index: 100;
+  opacity: 0;
+  animation: slidedown .3s ease forwards;
+  animation-delay: .7s
+}
+.more_features div a{
+  font-size: 14px;
+}
+.navbar a:hover {
+  color: rgb(222, 187, 122)
+}
+
+.companylogo {
+  transition: .3s;
+  opacity: 0;
+  animation: slideright 1.5s ease forwards;
+}
+
+.slide-left {
+  animation: slideleft .5s ease-in forwards;
+}
+
+.slide-right {
+  animation: slideright .5s ease-out forwards;
+}
+
+.slide-down{
+  animation: slidedown 0.7s ease-in-out forwards;
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.read_more{
+  background-color:  rgb(244, 167, 24);
+  color: rgb(12, 12, 37);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.read_more:hover{
+  box-shadow: 0px 1px 5px  white;
+  scale: 1.1;
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (width < 641px) {
+  * {
+    transition: 0.5s ease
+  }
+
+  header {
+    justify-content: space-evenly;
+    gap: 150px;
+    height: 60px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    font-size: 15px;
+    justify-content: start;
+    text-align: start;
+    height: 100vh;
+    top: 0;
+    padding-top: 23px;
+    right: 0;
+    position: absolute;
+    width: 50%;
+    float: right;
+    z-index: 100;
+    background-color: rgb(131, 169, 235);
+    animation: none;
+    overflow: hidden;
+  }
+
+  .navbar a,
+  .more_features {
+    padding: 10px;
+    padding-left: 25px;
+    width: 100%;
+  }
+
+  .navbar a:hover {
+    background-color: rgb(154, 188, 247);
+    text-decoration: none;
+  }
+
+  .more_features {
+    width: 100%;
+    padding-left: 25px;
+    background-color: rgb(131, 169, 235);
+  }
+
+  .more_features div {
+    width: 80%;
+    left: 25;
+    background-color: rgb(235, 237, 244);
+  }
+
+  .more_features div a {
+    padding: 0 4px 0 4px;
+    font-size: 12px;
+  }
+
+  .companylogo {
+    width: 45%;
+    height: 100%;
+  }
+
+  .menu_button {
+    font-size: 30px;
+  }
+
+  .banner{
+    height: 220px;
+  }
+}
+
+@media (width < 450px) {
+  *{
+    transition: 0.5s ease;
+  }
+  header{
+    justify-content: center;
+    gap: 150px;
+    height: 50px;
+  }
+  .menu_button {
+    font-size: 20px;
+  }
+  .banner{
+    height: 150px;
+  }
+  .navbar a,.more_features {
+    padding: 8px;
+    padding-left: 15px;
+    font-size: 12px;
+    width: 100%;
+  }
+  .more_features div {
+    width: 80%;
+    left: 10;
+    background-color: rgb(235, 237, 244);
+  }
+  .more_features div a {
+    padding: 0 2px 0 2px;
+    font-size: 12px;
+  }
+}
+
+
+#promises{
+  background-image: url("https://images.unsplash.com/photo-1702300731773-18e3365af5e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGJlYXV0aWZ1bCUyMGJ1aWxkaW5nfGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;  
+}
+#contact{
+  background-image: url("https://www.petraoasis.com/images/contact-with-petraoasis.webp");
+  background-size: cover;
+  background-position: center;  
 }
