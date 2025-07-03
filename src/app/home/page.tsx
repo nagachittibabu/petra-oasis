@@ -5,7 +5,6 @@ import CoreValueSection from '../components/corevalueSection';
 import ProjectSection from '../components/projectSection';
 import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/contactSection';
-import AboutUs from '../about-us/pages';
 
 
 
@@ -19,7 +18,7 @@ const HomePage = () => {
       <ProjectSection />
       <TeamSection />
       <ContactSection />
-       <AboutUs />
+     
     </div>
   )
 }
