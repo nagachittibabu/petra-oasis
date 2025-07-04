@@ -42,4 +42,4 @@ const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description 
   )
 }
 
-export default PromiseCard
+export default PromiseCard;
