@@ -23,7 +23,7 @@ const CoreValueSection= () => {
         >
             <h1
                 data-aos="zoom-in"
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center pb-12"
+                className="text-2xl sm:text-2xl lg:text-4xl md:text-[3xl] font-bold text-black text-center pb-12 "
             >
                 Company Core Values
             </h1>
@@ -31,7 +31,7 @@ const CoreValueSection= () => {
             <div
                 data-aos="zoom-in"
                 data-aos-delay="200"
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl core_section"
             >
                 {corevalues .map((item, index) => (
                     <CoreValueCard imageurl={item.image} title={item.title} description={item.about} key={item.title}/>
