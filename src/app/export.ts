@@ -211,3 +211,13 @@ export const commitmentcards = [
         "para": "Our commitment to quality is one of the bases for our competitive advantage and customers build their trust on us. Our customers’ satisfaction is one of our prime importance."
     }
 ]
+
+export const completedprojects = [
+    {
+        'image': '/images/commercial-building.png',
+        'title': 'Project',
+        'about': 'Palm Tower @NAKHEEL MALL.'
+
+    },
+   
+]
