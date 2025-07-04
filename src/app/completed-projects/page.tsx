@@ -32,7 +32,7 @@ const CompletedProjectSection = () => {
         data-aos-delay="200"
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl"
       >
-        {completedprojects .map((item, index) => (
+        {completedprojects .map((item) => (
           <ProjectCard imageurl={item.image} title={item.title} description={item.about} key={item.title}/>
         ))}
       </div>

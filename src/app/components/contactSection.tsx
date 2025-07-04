@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const ContactSection = () => {
@@ -35,8 +36,11 @@ const ContactSection = () => {
         </div>
       </div>
       <div className='w-1/2 xl:w-[40%] lg:w-[50%] md:w-[50%]
-      sm:w-[50%] h-full flex justify-center items-center  '>
-        <img src="https://www.petraoasis.com/images/contact-with-petraoasis.webp" alt="contact-us" className='w-[80%] h-[80%] rounded-[20px] width75 height75' />
+      sm:w-[50%] flex justify-center items-center width50 height90'>
+      <div className='relative w-[70%] xl:w-[75%] lg:w-[75%] md:w-[65%]
+      sm:w-[75%] h-[80%] width75 height75 flex justify-center items-center rounded-2xl shadow-lg overflow-hidden '>
+        <Image src="/images/contact-us.png" fill alt="contact-us" className='object-fill ' />
+      </div>
       </div>
     </div>
   )

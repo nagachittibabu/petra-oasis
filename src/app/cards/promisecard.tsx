@@ -19,7 +19,7 @@ const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description 
           alt="promise image"
           width={300}
           height={200}
-          className="w-full h-full  rounded-lg object-fill "
+          className="w-full h-full  rounded-lg object-contain "
         />
         </div>
       </div>

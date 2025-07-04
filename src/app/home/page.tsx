@@ -17,7 +17,7 @@ const HomePage = () => {
       <CoreValueSection />
       <ProjectSection />
       <ContactSection />
-
+      <TeamSection  />
     </div>
   )
 }

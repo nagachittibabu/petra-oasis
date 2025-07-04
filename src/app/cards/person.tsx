@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 interface PersonCardProps {
   imageurl: string
@@ -7,8 +8,11 @@ interface PersonCardProps {
 const Person: React.FC<PersonCardProps> = ({ imageurl, name, specialization }) => {
   return (
     <div className='w-full h-full flex flex-col  rounded-lg shadow-lg bg-white items-center justify-center '>
-      <div className='xl:w-[80%] xl:h-[80%] lg:w-full lg:h-[80%] md:w-full md:h-[90%] sm:w-[90%] sm:h-[90%] flex items-center justify-center width100  height50 height75 width75 height75'>
-        <img src={imageurl} alt={"pic"} className='w-3/4 h-3/4 rounded-full ' />
+      <div className='w-full h-full xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-[80%] sm:w-[90%] sm:h-[90%] flex justify-center items-center width100 height100'>
+        <div className='w-3/4 h-3/4 xl:w-3/4 xl:h-3/4 lg:w-3/4 lg:h-3/4 md:w-[65%] md:h-[65%] sm:w-3/4
+        sm:h-[50%] flex items-center justify-center relative rounded-full overflow-hidden width50 height50  '>
+          <Image src={imageurl} alt="person image" fill className='object-fit' />
+        </div>
       </div>
       <div className='w-full h-[20%] flex flex-col '>
         <h1 className='text-[18px] font-bold text-center font14'>{name}</h1>
