@@ -56,7 +56,7 @@ const HomeCarousel = () => {
                 </div>
               </div>
               <div className='w-full h-max bg-black/10 backdrop-blur-[4px] p-3 pl-1 rounded-md  xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[10px] paragraph text-gray-100 pt-2 slide-down '>
-                <p className='leading-[18px] xl:leading-[23px] lg:leading-[22px] md:leading-[18px] sm:leading-[16px] tracking-wide   line_height2'>Our mission is that with our credibility, commitment, quality, cost efficiency,
+                <p className='leading-[13px] xl:leading-[23px] lg:leading-[22px] md:leading-[18px] sm:leading-[16px] tracking-wide  p8'>Our mission is that with our credibility, commitment, quality, cost efficiency,
                   capability and financial soundness, with abundant resources of highly skilled and
                   self-motivated engineers and staff make us a perfect choice for solving any kind of
                   electro-mechanical work requirements in major projects.....</p>

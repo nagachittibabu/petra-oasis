@@ -122,9 +122,10 @@ body {
   header {
     justify-content:space-between;
     width: 100%;
-    height: 100px;
+    height: 80px;
+    padding: 0 15px 0 15px ;
   }
-  
+
   .navbar {
     flex-direction: column;
     font-size: 14px;
@@ -157,7 +158,7 @@ body {
   }
   .companylogo {
     width: 50%;
-    height: 100%;
+    height: 95%;
   }
   .menu_button {
     font-size: 30px;
@@ -254,16 +255,24 @@ body {
     width: 45%;
     height: 300px;
   }
-
+  .logo{
+    height: 70px ;
+  }
+  .padding-down{
+    padding: 0 0 20px 0;
+  }
+  .textleft{
+    text-align: left;
+  }
 }
 
-@media (width < 426px) {
+@media (width < 431px) {
   *{
     transition: 0.5s ease;
   }
   header{
-    gap: 150px;
-    height: 50px;
+    height: 70px;
+    padding: 0;
   }
   .navbar li a,.more_features,.projects{
     font-size: 10px;
@@ -277,7 +286,11 @@ body {
   .banner{
     height: 150px;
   }
-
+  .companylogo {
+    padding: 0 !important;
+    width: 50%;
+    height: 95%;
+  }
   .banner{
     height:280px;
   }
@@ -290,7 +303,7 @@ body {
     width: 50%;
   }
   .width75{
-    width: 75%;
+    width: 75% !important;
   }
   .width90{
     width: 90%;
@@ -299,7 +312,7 @@ body {
     height: 50%;
   }
   .height75{
-    height: 75%;
+    height: 75% !important;
   }
   .height90{
     height: 90% !important;
@@ -347,6 +360,15 @@ body {
   .promise-section{
     height: 310px !important;
   }
+  .logo{
+    height: 90px ;
+  }
+  .textleft{
+    text-align: left;
+  }
+  .padding-down{
+    padding: 0 0 20px 0;
+  }
 }
 
 @media (width < 376px) {
@@ -386,6 +408,7 @@ body {
   }
   .core_value{
     height: 310px;
+    width: 90%;
   }
   .font6{
     font-size: 6px !important;

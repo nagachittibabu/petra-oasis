@@ -10,7 +10,7 @@ interface CoreValueCardProps {
   const CoreValueCard: React.FC<CoreValueCardProps> = ({ imageurl, title, description }) => {  
   return (
     <div
-    className="w-full h-[270px] xl:h-[350px] lg:h-[350px] md:h-[320px] sm:h-[300px] flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-105 width90 core_value"
+    className="w-3/4 h-[260px] xl:h-[350px] lg:h-[350px] md:h-[320px] sm:h-[300px] flex flex-col items-center bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-105 core_value"
 >
 <div className='w-[30%] h-[40%]  flex items-center justify-center'>
     <Image

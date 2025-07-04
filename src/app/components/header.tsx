@@ -10,7 +10,8 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [closeBtn,setCloseBtn]=useState(false);
   const [menuButton,setMenuButton]=useState(false);
-  const [slideText, setSlideText] = useState("")
+  const [slideText, setSlideText] = useState("");
+
   useEffect(() => {
     setCloseBtn(false)
     const handleResize = () => {
@@ -29,31 +30,46 @@ const Header = () => {
   const closeNav = () => {
     setCloseBtn(false)
     setIsNavVisible(false);
-    setIsMobile(true)
+    setIsMobile(true);
+    setSlideText("slide-right");
+    setMenuButton(true);
   };
+
+  const menuClick=()=>{
+    setIsNavVisible(true);
+    setCloseBtn(true);
+    setIsMobile(false);
+    setSlideText("slide-left");
+    setMenuButton(false);
+  }
+
   useEffect(() => {
-    if (closeBtn) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    document.body.style.overflow = !isMobile && isNavVisible && closeBtn ? "hidden" : "";
+  }, [isMobile, isNavVisible]);
+
+  useEffect(() => {
+    return () => {
       document.body.style.overflow = '';
-    }
-  }, [closeBtn]);
+    };
+  }, []);
+  
   
   return (
-    <header className="w-full h-[100px] flex justify-center  bg-transparent absolute left-0 top-0 z-50 text-white">
-      <div className="w-1/4 h-full flex items-center justify-start companylogo">
-        <Link href="/">
+    <header className="w-full h-[100px] flex justify-center  bg-transparent absolute left-0 top-0 z-50 text-white ">
+      <div className="w-1/4 h-full flex items-center justify-center companylogo  ">
+        <Link href="/" className=" w-full h-[90%]
+        xl:w-[95%] xl:h-[90%]  lg:w-[90%] lg:h-[80%] md:w-full md:h-3/4 sm:w-full sm:h-[70%] relative overflow-hidden">
           <Image
             src="/images/companylogo.png"
             alt="Company Logo"
             fill
-            className="w-full h-full object-fit"
+            className="object-fit"
           />
         </Link>
       </div>
 
       {isMobile && menuButton && (
-        <button onClick={() => {setIsNavVisible(true);setCloseBtn(true);setIsMobile(false);setSlideText("slide-left")}} className="menu_button cursor:pointer">
+        <button onClick={menuClick} className="menu_button cursor:pointer">
           <i className="bx bx-menu"></i>
         </button>
       )}
@@ -65,11 +81,7 @@ const Header = () => {
             onMouseLeave={() => setViewProjects(false)}
           >
           {closeBtn &&(
-            <i className="w-full closebtn text-[22px] flex justify-end pr-10 " onClick={() => {
-              closeNav();
-              setSlideText("slide-right");
-            }}
-          >
+            <i className="w-full closebtn text-[22px] flex justify-end " onClick={closeNav}>
               &times;
             </i>
           )}
