@@ -6,7 +6,7 @@ export const ourpromises = [
         'label': 'Read More'
     },
     {
-        'image': '/images/park.png',
+        'image': '/promisecard1.png',
         'title': 'Professional Homes Constructions',
         'description': 'The construction process includes several stages: site selection and preparation, architectural design, engineering, material procurement, actual construction, and commissioning.',
         'label': 'Read More'

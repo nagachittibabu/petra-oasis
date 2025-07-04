@@ -18,11 +18,11 @@ const ProjectSection = () => {
   return (
     <section
       id="projects"
-      className="w-full flex flex-col items-center justify-center bg-cover bg-center py-20 px-6 sm:px-10 lg:px-20"
+      className="w-full flex flex-col items-center justify-center bg-cover bg-center h-max py-5 space-y-8"
     >
       <h1
         data-aos="zoom-in"
-        className="text-2xl sm:text-3xl lg:text-4xl text-black text-center font-bold pb-10"
+        className="text-2xl sm:text-2xl lg:text-4xl md:text-[3xl] text-black text-center font-bold "
       >
         We Are Specialized In Projects
       </h1>
@@ -30,10 +30,12 @@ const ProjectSection = () => {
       <div
         data-aos="zoom-in"
         data-aos-delay="200"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl"
+        className="w-full  flex flex-wrap  space-y-2  items-center justify-center"
       >
         {projects .map((item, index) => (
-          <ProjectCard imageurl={item.image} title={item.title} description={item.about} key={item.title}/>
+          <div className="xl:w-1/3 lg:w-1/3 md:w-1/3 sm:w-[45%] h-[270px]  flex items-center justify-center width90" key={item.title}>
+          <ProjectCard imageurl={item.image} title={item.title} description={item.about} />
+          </div>
         ))}
       </div>
     </section>

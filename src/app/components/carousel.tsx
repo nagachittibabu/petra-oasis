@@ -18,7 +18,7 @@ const HomeCarousel = () => {
   }, [])
 
   return (
-    <div className={`w-full h-[300px] lg:h-screen md:h-[400px] sm:h-[300px]  relative transform transition-all duration-700 ease-out ${animate ? 'scale-100 opacity-105' : 'scale-90 opacity-50'
+    <div className={`w-full h-max  relative transform transition-all duration-700 ease-out ${animate ? 'scale-100 opacity-105' : 'scale-90 opacity-50'
       }`}>
       <Carousel
         autoPlay
@@ -30,10 +30,10 @@ const HomeCarousel = () => {
         transitionTime={800}
         swipeable
         emulateTouch
-        className="h-full"
+        className=""
       >
         {banners.map((src, i) => (
-          <div key={i} className=" w-full h-[300px] lg:h-screen md:h-[400px] sm:h-[300px]  banner flex justify-center items-center relative">
+          <div key={i} className="w-full h-[300px] xl:h-screen lg:h-screen md:h-screen sm:h-[610px] banner flex justify-center items-center ">
             <Image
               src={src}
               alt={`Banner ${i + 1}`}
@@ -43,24 +43,27 @@ const HomeCarousel = () => {
               priority={i === 0}
             />
             <div className='w-full h-full absolute left-0 top-0 bg-gray-900 opacity-60 '></div>
-            <div className='w-1/3 h-max absolute left-50 top-70 text-white  text-left '>
-              <h1 className='  text-[26px] tracking-wider font-semibold slide-left'>Hello,Welcome to </h1>
-              <div className='relative slide-right'>
-                <h1 className='text-[50px] font-bold '><span className="bg-gradient-to-r from-orange-400 via-orange-00 to-blue-500 bg-clip-text text-transparent ">
-                  PETRA OASIS
-                </span></h1>
-                <h2 className='text-[13px] absolute bottom-[-1] right-50 font-semibold'><span className="bg-gradient-to-r from-blue-400  to-blue-400 bg-clip-text text-transparent">
-                  ELCTROMECHANICAL WORKS L.L.C
-                </span></h2>
+            <div className='xl:w-1/3 lg:w-[41%] md:w-[50%] sm:w-[50%] h-max absolute xl:left-1/7 xl:top-[40%] lg:left-1/8 lg:top-[40%] md:left-1/8  md:top-[50%] sm:left-1/9 sm:top-[50%] text-white  text-left p-2 width75 banner_content '>
+              <h1 className='xl:text-[26px] lg:text-[22px] md:text-[18px] sm:text-[14px] tracking-wider font-semibold slide-left welcomeText'>Hello,Welcome to </h1>
+              <div className='slide-right h-max '>
+                <div className='w-max space-y-0 xl:space-y2 lg:space-y-2 md:space-1.5 sm:space-y-1'>
+                  <h1 className='xl:h-[50px] lg:h-[42px] md:h-[34px] sm:h-[29px]  xl:text-[50px] lg:text-[42px] md:text-[36px] sm:text-[30px] font-bold titleText height22'><span className="bg-gradient-to-r from-orange-400 via-orange-00 to-blue-500 bg-clip-text text-transparent titleHeight">
+                    PETRA OASIS
+                  </span></h1>
+                  <h2 className='w-full text-right xl:text-[13px] 
+                  lg:text-[12px] md:text-[11px] sm:text-[8px] font-semibold subtitle'><span className="bg-gradient-to-r from-blue-400  to-blue-400 bg-clip-text text-transparent ">
+                    ELCTROMECHANICAL WORKS L.L.C
+                  </span></h2>
+                </div>
               </div>
-              <div className='w-full h-max bg-black/10 backdrop-blur-[4px] p-3 rounded-md text-overflow text-[14px] text-gray-100 pt-2 slide-down'>
-                <p className='leading-[23px] tracking-wide'>Our mission is that with our credibility, commitment, quality, cost efficiency,
+              <div className='w-full h-max bg-black/10 backdrop-blur-[4px] p-3 pl-1 rounded-md  xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[10px] paragraph text-gray-100 pt-2 slide-down '>
+                <p className='leading-[18px] xl:leading-[23px] lg:leading-[22px] md:leading-[18px] sm:leading-[16px] tracking-wide   line_height2'>Our mission is that with our credibility, commitment, quality, cost efficiency,
                   capability and financial soundness, with abundant resources of highly skilled and
                   self-motivated engineers and staff make us a perfect choice for solving any kind of
                   electro-mechanical work requirements in major projects.....</p>
               </div>
-              <div className='w-full pt-1'>
-                <button className="mt-6 px-6 py-2 read_more font-semibold rounded-lg transition duration-300 cursor-pointer">
+              <div className='w-full'>
+                <button className="xl:text-[17px] lg:text-[15px] md:text-[14px] sm:text-[11px] xl:px-6 xl:py-2 lg:px-5 lg:py-1.5  md:px-3 md:py-1 sm:px-2.5 sm:py-0.5  font-medium rounded-sm transition duration-300 cursor-pointer slide-right font12 read_more ">
                   Read More
                 </button>
               </div>

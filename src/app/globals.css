@@ -15,12 +15,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -29,27 +23,6 @@ body {
   }
 }
 
-.navbar a {
-  text-decoration: none;
-  transition: .3s;
-  opacity: 0;
-  animation: slidedown .3s ease-in forwards;
-  animation-delay: calc(.1s*var(--delay))
-}
-
-.more_features {
-  transition: .3s;
-  z-index: 100;
-  opacity: 0;
-  animation: slidedown .3s ease forwards;
-  animation-delay: .7s
-}
-.more_features div a{
-  font-size: 14px;
-}
-.navbar a:hover {
-  color: rgb(222, 187, 122)
-}
 
 .companylogo {
   transition: .3s;
@@ -93,11 +66,27 @@ body {
   }
 }
 
+@keyframes pop{
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+
+.contact-icon{
+  transition: .5s ;
+  opacity: 0;
+  animation: pop 2s ease-in-out infinite;
+
+}
 .read_more{
   background-color:  rgb(244, 167, 24);
   color: rgb(12, 12, 37);
-  font-weight: 600;
-  font-size: 17px;
 }
 
 .read_more:hover{
@@ -120,80 +109,161 @@ body {
   * {
     transition: 0.5s ease
   }
-
-  header {
-    justify-content: space-evenly;
-    gap: 150px;
-    height: 60px;
+  nav{
+    width: 40% !important;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(20, 35, 65);
+    overflow: hidden;
   }
-
+  header {
+    justify-content:space-between;
+    width: 100%;
+    height: 100px;
+  }
+  
   .navbar {
     flex-direction: column;
-    font-size: 15px;
+    font-size: 14px;
     justify-content: start;
-    text-align: start;
+    text-align: left;
     height: 100vh;
-    top: 0;
-    padding-top: 23px;
-    right: 0;
-    position: absolute;
-    width: 50%;
-    float: right;
+    width: 100%;
     z-index: 100;
-    background-color: rgb(131, 169, 235);
     animation: none;
     overflow: hidden;
   }
 
-  .navbar a,
-  .more_features {
-    padding: 10px;
-    padding-left: 25px;
+  .navbar li{
+    padding: 10px 0 10px 0;
+    border: 2px solid white;
+    height: max-content;
     width: 100%;
   }
-
-  .navbar a:hover {
-    background-color: rgb(154, 188, 247);
+  .navbar li:hover{
+    height: fit-content;
+  }
+  .navbar a,.more_features,.projects {
+    width: 100%;
+    padding-left: 20px;
     text-decoration: none;
   }
-
-  .more_features {
-    width: 100%;
-    padding-left: 25px;
-    background-color: rgb(131, 169, 235);
-  }
-
-  .more_features div {
-    width: 80%;
-    left: 25;
-    background-color: rgb(235, 237, 244);
-  }
-
   .more_features div a {
-    padding: 0 4px 0 4px;
+    padding: 5px;
     font-size: 12px;
   }
 
   .companylogo {
-    width: 45%;
+    width: 50%;
     height: 100%;
   }
 
   .menu_button {
     font-size: 30px;
   }
-
-  .banner{
-    height: 220px;
+  .width50{
+    width: 50%;
   }
+  .width75{
+    width: 75%;
+  }
+  .width25{
+  width: 40%;
+  }
+  .width100{
+    width: 100% !important;
+  }
+  .width90{
+    width: 90% !important;
+  }
+  .height50{
+    height: 50%;
+  }
+  .height100{
+    height: 100%;
+  }
+  .height75{
+    height: 75%;
+  }
+  .height90{
+    height: 90%;
+  }
+  .p2{
+    padding: 2px;
+  }
+  .mx4{
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .titleHeight{
+    height: 30px !important;
+  }
+  .subtitle{
+    font-size: 8px;
+  }
+  .paragraph{
+    font-size: 8px;
+  }
+  .font10{
+    font-size: 10px;
+  }
+  .font12{
+    font-size: 12px;
+  }
+  .font14{
+    font-size: 14px;
+  }
+  .welcomeText{
+    font-size: 12px;
+  }
+  .titleText{
+    font-size:28px
+  }
+  .banner{
+    height:380px;
+  }
+  .banner_content{
+    left:30;
+    bottom:30;
+    width: 65%;
+  }
+  .read_more{
+    font-size: 12px;
+    padding: 4px ;
+  }
+  .promise-section{
+    width: 90% !important;
+    height: 280px !important;
+  }
+
+  .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .core_section{
+    place-items: center;
+  }
+  .contact_section{
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  .team_section{
+    width: 45%;
+    height: 300px;
+  }
+
 }
 
-@media (width < 450px) {
+@media (width < 426px) {
   *{
     transition: 0.5s ease;
   }
   header{
-    justify-content: center;
     gap: 150px;
     height: 50px;
   }
@@ -218,8 +288,122 @@ body {
     padding: 0 2px 0 2px;
     font-size: 12px;
   }
+  .banner{
+    height:280px;
+  }
+  .banner_content{
+    left:30;
+    bottom:30;
+    width: 60%;
+  }
+  .width50{
+    width: 50%;
+  }
+  .width75{
+    width: 75%;
+  }
+  .width90{
+    width: 90%;
+  }
+  .height50{
+    height: 50%;
+  }
+  .height75{
+    height: 75%;
+  }
+  .height90{
+    height: 90% !important;
+  }
+  .titleHeight{
+    height: 24px !important;
+  }
+  .subtitle{
+    font-size: 5px;
+  }
+  .font8{
+    font-size: 8px !important;
+  }
+  .font10{
+    font-size: 10px !important;
+  }
+
+  .font13{
+    font-size: 13px;
+  }
+  .welcomeText{
+    font-size: 9px;
+  }
+  .titleText{
+    font-size:21px
+  }
+  .line_height2{
+    line-height: 10px !important;
+  }
+  .read_more{
+    font-size: 8px;
+    padding: 4px;
+  }
+  .core_section{
+    justify-content: center;
+    align-items: center;
+  }
+  .team_section{
+    width: 47% !important;
+    height: 250px !important;
+  }
+  .core_value{
+    height: 290px;
+  }
+  .promise-section{
+    height: 310px !important;
+  }
 }
 
+@media (width < 376px) {
+  .width100{
+    width: 100%;
+  }
+  .width50{
+    width: 50% !important;
+  }
+  .width75{
+    width: 75% !important;
+  }
+  .width90{
+    width: 90%;
+  }
+  .height100{
+    height: 100%;
+  }
+  .height50{
+    height: 50% !important;
+  }
+  .height75{
+    height: 75% !important;
+  }
+  .height90{
+    height: 90%;
+  }
+  .team_section{
+    width: 90% !important;
+    height: 250px !important;
+  }
+  .core_value{
+    height: 310px;
+  }
+  .font6{
+    font-size: 6px !important;
+  }
+  .font8{
+    font-size: 8px !important;
+  }
+  .font10{
+    font-size: 10px !important;
+  }
+  .promise-section{
+    height: 320px !important;
+  }
+}
 
 #promises{
   background-image: url("https://images.unsplash.com/photo-1702300731773-18e3365af5e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGJlYXV0aWZ1bCUyMGJ1aWxkaW5nfGVufDB8fDB8fHww");
@@ -228,6 +412,12 @@ body {
 }
 #contact{
   background-image: url("https://www.petraoasis.com/images/contact-with-petraoasis.webp");
+  background-size: cover;
+  background-position: center;  
+}
+
+#about-us{
+  background-image: url("/images/construction-banner.png");
   background-size: cover;
   background-position: center;  
 }

@@ -16,9 +16,8 @@ const HomePage = () => {
       <PromiseSection />
       <CoreValueSection />
       <ProjectSection />
-      <TeamSection />
       <ContactSection />
-     
+
     </div>
   )
 }
