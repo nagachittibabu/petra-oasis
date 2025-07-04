@@ -37,9 +37,8 @@ const HomeCarousel = () => {
             <Image
               src={src}
               alt={`Banner ${i + 1}`}
-              layout="fill"
-              objectFit="cover"
-              className=""
+              fill
+              className="object-fit"
               priority={i === 0}
             />
             <div className='w-full h-full absolute left-0 top-0 bg-gray-900 opacity-60 '></div>

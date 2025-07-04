@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 interface ClientCardprops{
    imageurl:string
@@ -5,7 +6,7 @@ interface ClientCardprops{
 const ClientCard:React.FC<ClientCardprops>=({imageurl})=>{
     return(
         <div>
-            <img src={imageurl} alt="pic" />
+            <Image src={imageurl} alt="pic" fill className="object-contain"/>
         </div>
     )
 }

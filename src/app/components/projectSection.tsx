@@ -32,7 +32,7 @@ const ProjectSection = () => {
         data-aos-delay="200"
         className="w-full  flex flex-wrap  space-y-2  items-center justify-center"
       >
-        {projects .map((item, index) => (
+        {projects .map((item) => (
           <div className="xl:w-1/3 lg:w-1/3 md:w-1/3 sm:w-[45%] h-[270px]  flex items-center justify-center width90" key={item.title}>
           <ProjectCard imageurl={item.image} title={item.title} description={item.about} />
           </div>

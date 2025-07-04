@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
@@ -15,6 +17,7 @@ const Header = () => {
       const mobile = window.innerWidth < 642;
       setIsMobile(mobile);
       setMenuButton(true);
+      setCloseBtn(mobile)
       setIsNavVisible(!mobile);
     };
 
@@ -24,9 +27,9 @@ const Header = () => {
   }, []);
 
   const closeNav = () => {
+    setCloseBtn(false)
     setIsNavVisible(false);
     setIsMobile(true)
-    setCloseBtn(false)
   };
   useEffect(() => {
     if (closeBtn) {
@@ -39,16 +42,17 @@ const Header = () => {
   return (
     <header className="w-full h-[100px] flex justify-center  bg-transparent absolute left-0 top-0 z-50 text-white">
       <div className="w-1/4 h-full flex items-center justify-start companylogo">
-        <a href="/">
-          <img
+        <Link href="/">
+          <Image
             src="/images/companylogo.png"
             alt="Company Logo"
-            className="w-full h-full "
+            fill
+            className="w-full h-full object-fit"
           />
-        </a>
+        </Link>
       </div>
 
-      {menuButton && (
+      {isMobile && menuButton && (
         <button onClick={() => {setIsNavVisible(true);setCloseBtn(true);setIsMobile(false);setSlideText("slide-left")}} className="menu_button cursor:pointer">
           <i className="bx bx-menu"></i>
         </button>
@@ -61,16 +65,16 @@ const Header = () => {
             onMouseLeave={() => setViewProjects(false)}
           >
           {closeBtn &&(
-            <li className="w-full closebtn text-[22px] flex justify-end pr-10 " onClick={() => {
+            <i className="w-full closebtn text-[22px] flex justify-end pr-10 " onClick={() => {
               closeNav();
               setSlideText("slide-right");
             }}
           >
               &times;
-            </li>
+            </i>
           )}
-            <li className="h-full flex justify-center items-center"><a href="/" style={{ "--delay": 1 } as React.CSSProperties} >HOME</a></li>
-            <li className="h-full flex justify-center items-center "><a href="/about-us" style={{ "--delay": 2 } as React.CSSProperties}>ABOUT US</a></li>
+            <li className="h-full flex justify-center items-center"><Link href="/" style={{ "--delay": 1 } as React.CSSProperties} >HOME</Link></li>
+            <li className="h-full flex justify-center items-center "><Link href="/about-us" style={{ "--delay": 2 } as React.CSSProperties}>ABOUT US</Link></li>
             <li className="h-full flex justify-center items-center "
               onMouseLeave={() => setViewProjects(false)}>
               <div
@@ -83,13 +87,13 @@ const Header = () => {
                 {viewProjects && (
                   <div className="w-max absolute top-8  flex flex-col bg-gray-800 rounded p-2 shadow-md space-y-4 text-gray-200 left-0  text-black text-[8px] xl:text-[11px] lg:text-[10px] md:text-[9px] sm:text-[8px] rounded-lg
                   xl:top-8 md:top-6 sm:top-4 space-y-1 lg:spaace-y-4 md:space-y-3 sm:space-y-2 ">
-                    <a href="" className="" >ONGOING PROJECTS</a>
-                    <a href="" className="">COMPLETED PROJECTS</a>
+                    <Link href="" className="" >ONGOING PROJECTS</Link>
+                    <Link href="" className="">COMPLETED PROJECTS</Link>
                   </div>
                 )}
               </div>
             </li>
-            <li className="h-full flex justify-center items-center "><a href="/services" style={{ "--delay": 3 } as React.CSSProperties}>SERVICES</a></li>
+            <li className="h-full flex justify-center items-center "><Link href="/services" style={{ "--delay": 3 } as React.CSSProperties}>SERVICES</Link></li>
             <li className="h-full flex justify-center items-center " 
                 onMouseLeave={() => setMoreDetails(false)}>
               <div
@@ -102,17 +106,17 @@ const Header = () => {
                 {moreDetails && (
                   <div className="w-max absolute top-8  flex flex-col bg-gray-800 rounded p-2 shadow-md space-y-4 text-gray-200 left-0  text-black text-[8px] xl:text-[11px] lg:text-[10px] md:text-[9px] sm:text-[8px] rounded-lg
                   xl:top-8 md:top-6 sm:top-4 space-y-1 lg:spaace-y-4 md:space-y-3 sm:space-y-2 ">
-                    <a href="" className="" >GROUPS</a>
-                    <a href="" className="">CAST</a>
-                    <a href="" className="">COMITMENT TO QUALITY</a>
-                    <a href="/PETRA_PROFILE.pdf" className="">PROFILE</a>
+                    <Link href="" className="" >GROUPS</Link>
+                    <Link href="" className="">CAST</Link>
+                    <Link href="" className="">COMITMENT TO QUALITY</Link>
+                    <Link href="/PETRA_PROFILE.pdf" className="">PROFILE</Link>
                   </div>
                 )}
           
               </div>
             </li>
-            <li className="h-full flex justify-center items-center">
-              <a href="/contact-us">CONTACT-US</a>
+            <li className="h-full flex justify-center items-center contact_us">
+              <Link href="/contact-us">CONTACT-US</Link>
             </li>
           </ul>
         </nav>

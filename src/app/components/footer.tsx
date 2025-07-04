@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 const Footer = () => {
     return (
@@ -5,7 +6,7 @@ const Footer = () => {
             <div className="w-full h-[350px] flex justify-center xl:space-x-10 lg:space-x-8 items-center bg-gray-700 text-gray-100">
                 <div className="w-1/5 h-full  flex justify-center items-center ">
                     <div className="w-[75%] h-3/4  flex justify-center  items-start">
-                        <img src="/images/companylogo.png" alt="" className="w-max h-max"/>
+                        <Image src="/images/companylogo.png" alt="" fill className="w-max h-max object-contain"/>
                     </div>
                 </div>
                 <div className=" w-1/5 h-full flex  justify-center items-center ">
