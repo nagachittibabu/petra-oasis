@@ -13,7 +13,6 @@ const Header = () => {
   const [slideText, setSlideText] = useState("");
 
   useEffect(() => {
-    setCloseBtn(false)
     const handleResize = () => {
       const mobile = window.innerWidth < 642;
       setIsMobile(mobile);
@@ -28,10 +27,10 @@ const Header = () => {
   }, []);
 
   const closeNav = () => {
-    setCloseBtn(false)
+    setSlideText("slide-right");
+    setCloseBtn(false);
     setIsNavVisible(false);
     setIsMobile(true);
-    setSlideText("slide-right");
     setMenuButton(true);
   };
 
@@ -81,7 +80,7 @@ const Header = () => {
             onMouseLeave={() => setViewProjects(false)}
           >
           {closeBtn &&(
-            <i className="w-full closebtn text-[22px] flex justify-end " onClick={closeNav}>
+            <i className="w-full closebtn text-[22px] flex justify-start pl-4" onClick={closeNav}>
               &times;
             </i>
           )}

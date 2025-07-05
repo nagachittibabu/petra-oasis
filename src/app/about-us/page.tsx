@@ -7,9 +7,11 @@ import { about } from '../export';
 const AboutUs = () => {
   return (
     <section
-      id="about"
-      className="w-full py-20 px-4 sm:px-6 lg:px-20 xl:px-32 bg-gradient-to-r from-orange-400 to-blue-500"
+      className="w-full bg-gradient-to-r from-orange-400 to-blue-500"
     >
+      <div className='w-full h-[500px] bg-blue-900'       id="about">
+        <div className='w-full h-full bg-black opacity-50 flex items-end '><div className='text-white w-full h-[100px] border'>about_us</div></div>
+      </div>
       <div className="max-w-screen-xl mx-auto">
         <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-center text-black mb-16">
           About Us

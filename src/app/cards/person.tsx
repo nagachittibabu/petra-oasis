@@ -7,10 +7,10 @@ interface PersonCardProps {
 }
 const Person: React.FC<PersonCardProps> = ({ imageurl, name, specialization }) => {
   return (
-    <div className='w-full h-full flex flex-col  rounded-lg shadow-lg bg-white items-center justify-center '>
-      <div className='w-full h-full xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-[80%] sm:w-[90%] sm:h-[90%] flex justify-center items-center width100 height100'>
+    <div className='w-full h-full flex flex-col  rounded-lg shadow-lg bg-white items-center justify-center person_card'>
+      <div className='w-full h-full xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-[80%] sm:w-[90%] sm:h-[90%] flex justify-center items-center  '>
         <div className='w-3/4 h-[65%] xl:w-3/4 xl:h-3/4 lg:w-3/4 lg:h-3/4 md:w-[70%] md:h-[70%] sm:w-3/4
-        sm:h-[40%] flex items-center justify-center relative rounded-lg overflow-hidden'>
+        sm:h-[60%] flex items-center justify-center relative rounded-lg overflow-hidden'>
           <Image src={imageurl} alt="person image" fill className='object-fit' />
         </div>
       </div>
