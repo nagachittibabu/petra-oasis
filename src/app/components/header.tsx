@@ -79,7 +79,7 @@ const Header = () => {
           <ul className="navbar w-full h-full flex justify-end pr-8 items-center space-x-4 xl:space-x-20 lg:space-x-12 md:space-x-6 sm:space-x-8 text-8px  xl:text-[15px] lg:text-[15px]  md:text-[13px] sm:text-[11px] text-white font-semibold "
             onMouseLeave={() => setViewProjects(false)}
           >
-          {closeBtn &&(
+          {closeBtn && isNavVisible &&(
             <i className="w-full closebtn text-[22px] flex justify-start pl-4" onClick={closeNav}>
               &times;
             </i>
