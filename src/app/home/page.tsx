@@ -11,7 +11,7 @@ import ContactSection from '../components/contactSection';
 const HomePage = () => {
 
   return (
-    <div className='w-full h-full  '>
+    <div className='w-full h-full flex flex-col space-y-4 '>
       <HomeCarousel/>
       <PromiseSection />
       <CoreValueSection />

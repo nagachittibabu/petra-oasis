@@ -32,7 +32,7 @@ const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description 
         </p>
         </div>
         <div className='w-[90%] flex justify-center items-center h-1/4  l:w-full  lg:w-[95%]  md:w-[95%]  sm:w-[100%]'>
-          <button className="border-2 border-red-200 text-orange-400 rounded-lg text-[12px] font-semibold  hover:bg-orange-300 hover:text-black h-max px-3 py-1 p2">
+          <button className="border-2 border-red-200 text-white rounded-lg text-[12px] font-semibold  hover:bg-orange-300 hover:text-black h-max px-3 py-1 p2 bg-orange-400">
             Read more..
           </button>
         </div>
