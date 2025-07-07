@@ -23,7 +23,7 @@ const PromiseSection = () => {
     >
       <h1
         data-aos="zoom-in"
-        className="text-xl sm:text-2xl lg:text-4xl md:text-[3xl]  font-bold text-center text-black pb-12"
+        className="text-xl sm:text-2xl xl:text-4xl  lg:text-3xl md:text-[3xl]  font-bold text-center text-black pb-12"
       >
         Our Promise as a contractor is to build your project
       </h1>
@@ -33,9 +33,9 @@ const PromiseSection = () => {
         data-aos-delay="200"
         className="w-full  flex flex-wrap  space-y-2  items-center justify-center "
       >
-        {ourpromises.map((item, index) => (
+        {ourpromises.map((item) => (
         <div key={item.title} className="promise_card xl:w-1/3 lg:w-1/3 md:w-1/3 sm:w-[45%] h-[450px]
-        xl:h-[450px] lg:h-[370px] md:h-[350px] sm:h-[350px]   flex items-center justify-center width90 promise-section">
+        xl:h-[450px] lg:h-[370px] md:h-[350px] sm:h-[350px] flex items-center justify-center width90 promise-section">
           <PromiseCard imageurl={item.image} title={item.title} description={item.description} />
         </div>
         ))}
