@@ -21,7 +21,10 @@ const Header = () => {
       setIsNavVisible(!mobile);
     };
 
-    handleResize();
+    setTimeout(() => {
+      handleResize(); 
+    }, 0);
+  
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
