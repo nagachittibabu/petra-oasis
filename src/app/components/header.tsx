@@ -17,7 +17,6 @@ const Header = () => {
       const mobile = window.innerWidth < 642;
       setIsMobile(mobile);
       setMenuButton(true);
-      setCloseBtn(mobile)
       setIsNavVisible(!mobile);
     };
 
