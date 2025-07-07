@@ -7,7 +7,7 @@ const Header = () => {
   const [moreDetails, setMoreDetails] = useState(false);
   const [viewProjects, setViewProjects] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 642);
   const [closeBtn,setCloseBtn]=useState(false);
   const [menuButton,setMenuButton]=useState(false);
   const [slideText, setSlideText] = useState("");
