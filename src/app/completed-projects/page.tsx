@@ -6,7 +6,7 @@ import { completedProjects } from '../export';
 
 const CompletedProjects: React.FC = () => {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-20 py-12 bg-white">
+    <div className="w-full px-4 sm:px-6 lg:px-20 py-12 bg-white">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
         Completed Projects
       </h2>
@@ -46,7 +46,7 @@ const CompletedProjects: React.FC = () => {
           </div>
         </div>
       ))}
-    </section>
+    </div>
   );
 };
 
