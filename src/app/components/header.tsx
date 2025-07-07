@@ -76,16 +76,19 @@ const Header = () => {
       )}
 
       {isNavVisible && (
-        <nav className={`w-3/4 width50 h-full flex justify-center items-center ${slideText}`}onMouseLeave={() => setViewProjects(false)} id="navbar"
+        <nav className={`w-3/4 width50 h-full flex justify-center items-center relative ${slideText}`}onMouseLeave={() => setViewProjects(false)} id="navbar"
         >
+          {closeBtn && (
+            <div
+              className="absolute top-4 left-4 z-[999] text-white text-[22px] cursor-pointer"
+              onClick={closeNav}
+            >
+              &times;
+            </div>
+          )}
           <ul className="navbar w-full h-full flex justify-end pr-8 items-center space-x-4 xl:space-x-20 lg:space-x-12 md:space-x-6 sm:space-x-8 text-8px  xl:text-[15px] lg:text-[15px]  md:text-[13px] sm:text-[11px] text-white font-semibold "
             onMouseLeave={() => setViewProjects(false)}
           >
-          {closeBtn &&(
-            <i className="w-full closebtn text-[22px] flex justify-start pl-4" onClick={closeNav}>
-              &times;
-            </i>
-          )}
             <li className="h-full flex justify-center items-center"><Link href="/" style={{ "--delay": 1 } as React.CSSProperties} >HOME</Link></li>
             <li className="h-full flex justify-center items-center "><Link href="/about-us" style={{ "--delay": 2 } as React.CSSProperties}>ABOUT US</Link></li>
             <li className="h-full flex justify-center items-center "
