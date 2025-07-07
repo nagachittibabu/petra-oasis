@@ -86,7 +86,7 @@ const Header = () => {
               &times;
             </div>
           )}
-          <ul className="navbar w-full h-full flex justify-end pr-8 items-center space-x-4 xl:space-x-20 lg:space-x-12 md:space-x-6 sm:space-x-8 text-8px  xl:text-[15px] lg:text-[15px]  md:text-[13px] sm:text-[11px] text-white font-semibold relative "
+          <ul className="navbar w-full h-full flex justify-end pr-8 items-center space-x-4 xl:space-x-20 lg:space-x-12 md:space-x-6 sm:space-x-8 text-8px  xl:text-[15px] lg:text-[15px]  md:text-[13px] sm:text-[11px] text-white font-semibold  "
             onMouseLeave={() => setViewProjects(false)}
           >
             <li className="h-full flex justify-center items-center"><Link href="/" style={{ "--delay": 1 } as React.CSSProperties} >HOME</Link></li>
