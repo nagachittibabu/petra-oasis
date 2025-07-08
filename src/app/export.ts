@@ -102,17 +102,17 @@ export const contact = [
 
 export const Persons = [
     {
-        "imageurl": "/images/companylogo.png",
+        "imageurl": "/images/construction-banner.png",
         "name": "Er. A K Ayube",
         "specialization": "B.tech(Civil),M.tech(structure)"
     },
     {
-        "imageurl": "",
+        "imageurl": "/images/construction-banner.png",
         "name": "Er. A K ",
         "specialization": "B.tech(Civil),M.tech(structure)"
     },
     {
-        "imageurl": "",
+        "imageurl": "/images/construction-banner.png",
         "name": "Er. A K A",
         "specialization": "B.tech(Civil),M.tech(structure)"
     }

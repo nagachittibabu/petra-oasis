@@ -1,17 +1,22 @@
+import Image from "next/image";
 import React from "react";
 const Footer = () => {
     return (
-        <footer className="w-full h-[400px] ">
-            <div className="w-full h-[350px] flex justify-center xl:space-x-10 lg:space-x-8 items-center bg-gray-700 text-gray-100">
-                <div className="w-1/5 h-full  flex justify-center items-center ">
-                    <div className="w-[75%] h-3/4  flex justify-center  items-start">
-                        <img src="/images/companylogo.png" alt="" className="w-max h-max"/>
+        <footer className="w-full h-max xl:h-[350px] lg:h-[360px] md:h-[320px] sm:h-[350px] ">
+            <div className="w-full h-[520px] xl:h-[300px] lg:h-[310px] md:h-[270px] sm:h-[430px] flex flex-wrap xl:justify-evenly lg:justify-evenly
+             md:justify-start sm:justify-evenly items-center bg-blue-900 text-gray-100 xl:p-0 lg:p-0 md:p-0 sm:p-6 p-6 hmax">
+                <div className="w-1/2 xl:w-1/5 lg:w-1/5 md:w-1/4 sm:w-1/2 h-1/2 xl:h-full lg:h-full md:h-full sm:h-1/2  flex justify-center items-center width50 footer_section  footer_section ">
+                    <div className="w-[80%] xl:w-3/4 lg:w-full md:w-full sm:w-[80%]  h-3/4 padding-down ">
+                    <div className="w-full h-[25%]  flex justify-center  items-start relative logo ">
+                        <Image src="/images/companylogo.png" alt="" fill className="object-contain "/>
+                    </div>
                     </div>
                 </div>
-                <div className=" w-1/5 h-full flex  justify-center items-center ">
-                    <div className="w-3/4 h-3/4  flex flex-col space-y-5  text-center  ">
-                        <h1 className="font-bold text-white">QUICK LINKS</h1>
-                        <ul className="flex  flex-col space-y-5 text-gray-100 text-[13px] ">
+                <div className=" w-1/2 xl:w-1/5 lg:w-1/5 md:w-1/6 sm:w-1/2 h-1/2 xl:h-full lg:h-full md:h-full sm:h-1/2 flex  justify-center items-center width50 footer_section  ">
+                    <div className="w-[90%] xl:w-3/4 lg:w-full md:w-full sm:w-[80%]  h-3/4  flex flex-col space-y-5  text-center  padding-down ">
+                        <h1 className="font-bold text-white text-[13px] xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft">QUICK LINKS</h1>
+                        <ul className="flex  flex-col space-y-5 text-gray-100 textleft text-[11px] xl:text-[13px] lg:text-[12px] md:text-[10px] sm:text-[11px]
+                        xl:space-y-5 lg:space-y-4 md:space-y-3 sm:space-y-4">
                             < li><a href="" className="hover:underline ">HOME</a></ li>
                             < li><a href="" className="hover:underline ">ABOUT US</a></ li>
                             < li><a href="" className="hover:underline ">GROUPS</a></ li>
@@ -21,25 +26,26 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <div className="w-1/5 h-full flex flex-col justify-center items-center ">
-                  
-                    <div className="w-3/4 h-3/4  flex flex-col space-y-5  text-center  ">
-                    <h1 className="font-bold text-white">SPECIALIZATION IN</h1>                       
-                     <a href="" className="text-[13px] hover:underline" >MECHANICAL SPECILIZATION</a>
-                        <a href="" className="text-[13px] hover:underline">PLUMBING SPECILIZATION</a>
-                        <a href="" className="text-[13px] hover:underline">ELECTRICAL SPECILIZATION</a>
-                        <a href="" className="text-[13px] hover:underline">PRECAST SPECILIZATION</a>
-                    </div>
-
+                <div className="w-1/2 xl:w-1/5 lg:w-1/5 md:w-1/4 sm:w-1/2 h-1/2 xl:h-full lg:h-full md:h-full sm:h-1/2 flex flex-col justify-center items-center width50  footer_section  ">
+                <div className="w-[90%] xl:w-3/4 lg:w-full md:w-full sm:w-[80%]  h-3/4  flex flex-col space-y-5  text-center padding-down  ">
+                <h1 className="font-bold text-white text-[13px]  xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px]  textleft">SPECIALIZATION IN</h1>                       
+                    <ul className="flex  flex-col space-y-5 text-gray-100 textleft text-[10px] xl:text-[13px] lg:text-[12px] md:text-[10px] sm:text-[11px]
+                        xl:space-y-5 lg:space-y-4 md:space-y-3 sm:space-y-4">
+                            < li><a href="" className="hover:underline ">MECHANICAL SPECILIZATION</a></ li>
+                            < li><a href="" className="hover:underline ">PLUMBING SPECILIZATION</a></ li>
+                            < li><a href="" className="hover:underline ">ELECTRICAL SPECILIZATION</a></ li>
+                            < li><a href="" className="hover:underline ">PRECAST SPECILIZATION</a></ li>
+                        </ul>
+                </div>
                 </div>
 
-                <div className="w-1/5 h-full flex flex-col justify-center items-center ">
-                    <div className=" w-3/4 h-3/4 space-y-2">
-                        <h3 className="text-[15px] font-bold text-white">CONTACT US</h3>
+                <div className="w-1/2 xl:w-1/5 lg:w-1/5 md:w-[30%] sm:w-1/2  h-1/2 xl:h-full lg:h-full md:h-full sm:h-1/2 flex flex-col justify-center items-center width50 footer_section  ">
+                    <div className="w-full xl:w-[90%] lg:w-full md:w-full sm:w-[80%]  h-3/4 space-y-2 xl:space-y-2 lg:space-y-2 md:space-y-2 sm:space-y-0 padding-down ">
+                        <h3 className="xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft font-bold text-white text-[13px] ">CONTACT US</h3>
                         <div className="">
                             
-                            <h4 className="font-bold  text-[14px]  ">We Are Here</h4>
-                            <p className="text-[12px] max-w-full   ">Big Four Building Flat
+                            <h4 className="font-semibold  text-[12px]  xl:text-[14px] lg:text-[14px] md:text-[13px] sm:text-[12px]">We Are Here</h4>
+                            <p className="xl:text-[12px] lg:text-[12px] md:text-[11px] sm:text-[10px] text-[10px] max-w-full  ">Big Four Building Flat
                                 No:112(1st Floor)
 
                                 P.O Box:67411,Al Nabba,
@@ -47,15 +53,15 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="">
-                             <h4 className="font-bold text-[14px]">CALL US</h4>
-                                    <a href="tel:+971-50975442" className="text-[12px] hover:underline">+971-50975442 <span>,</span></a>
-                                    <a href="tel:+971-556038444" className="text-[12px] hover:underline">+971-556038444</a>
+                             <h4 className="font-semibold text-[13px]  xl:text-[14px] lg:text-[14px] md:text-[13px] sm:text-[12px]">CALL US</h4>
+                                    <a href="tel:+971-50975442" className="xl:text-[12px] lg:text-[12px] md:text-[11px] sm:text-[10px] text-[10px]   hover:underline">+971-50975442 <span>,</span></a>
+                                    <a href="tel:+971-556038444" className="xl:text-[12px] lg:text-[12px] md:text-[11px] sm:text-[10px] text-[10px]  hover:underline">+971-556038444</a>
                         </div>
                     <div className="" >
-                          <h4 className="font-bold text-[14px]">MAIL US</h4>
-                                    <a href="mailto:info@petraoasis.com" className="text-[12px] hover:underline">info@petraoasis.com<span>,</span></a>
+                          <h4 className="font-semibold text-[13px]  xl:text-[14px] lg:text-[14px] md:text-[13px] sm:text-[12px]">MAIL US</h4>
+                                    <a href="mailto:info@petraoasis.com" className="xl:text-[12px] lg:text-[12px] md:text-[11px] sm:text-[10px] text-[10px]   hover:underline ">info@petraoasis.com , </a>
 
-                                <a href="mailto:raju@petraoasis.com" className="text-[12px] hover:underline">raju@petraoasis.com</a>
+                                <a href="mailto:raju@petraoasis.com" className="xl:text-[12px] lg:text-[12px] md:text-[11px] sm:text-[10px] text-[10px] hover:underline">raju@petraoasis.com</a>
                     </div>
                     </div>
 
@@ -64,7 +70,7 @@ const Footer = () => {
 
             </div>
 
-            <div className="w-full h-[50px] bg-orange-200 flex justify-between px-30 items-center">
+            <div className="w-full h-[50px] bg-orange-400 flex justify-around  items-center xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft font-semibold text-[10px]">
              <p className="text-center">&copy;copyright2025</p>
              <p>powered by </p>
             </div>

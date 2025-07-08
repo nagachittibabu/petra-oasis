@@ -10,16 +10,15 @@ const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description 
   return (
     <div
       className="w-[90%] xl:w-3/4 lg:w-[85%] md:w-[90%]
-      sm:w-[90%]  h-full bg-white xl:p-8 lg:p-6 md:p-3 sm:p-8 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105"
+      sm:w-[90%]  h-full bg-white xl:p-8 lg:p-6 md:p-3 sm:p-8 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 "
     >
-      <div className='w-full h-[40%]  flex justify-center items-center '>
-        <div className='xl:w-[85%] xl:h-[85%] lg:w-[95%] lg:h-[95%] md:w-[95%] md:h-[95%] sm:w-[100%] sm:h-[100%] flex justify-center items-center height90  width75'>
+      <div className='w-full h-[40%] flex justify-center items-center '>
+        <div className='w-[80%] h-[90%] relative xl:w-[95%] xl:h-full lg:w-[95%] lg:h-[95%] md:w-[95%] md:h-[95%] sm:w-[100%] sm:h-[100%] flex justify-center items-center rounded-lg overflow-hidden'>
         <Image
           src={imageurl}
           alt="promise image"
-          width={300}
-          height={200}
-          className="w-full h-full  rounded-lg object-fill "
+          fill
+          className="object-fill"
         />
         </div>
       </div>
@@ -33,7 +32,7 @@ const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description 
         </p>
         </div>
         <div className='w-[90%] flex justify-center items-center h-1/4  l:w-full  lg:w-[95%]  md:w-[95%]  sm:w-[100%]'>
-          <button className="border-2 border-red-200 text-orange-400 rounded-lg text-[12px] font-semibold  hover:bg-orange-300 hover:text-black h-max px-3 py-1 p2">
+          <button className="border-2 border-red-200 text-white rounded-lg text-[12px] font-semibold  hover:bg-orange-300 hover:text-black h-max px-3 py-1 p2 bg-orange-400">
             Read more..
           </button>
         </div>

@@ -31,11 +31,11 @@ body {
 }
 
 .slide-left {
-  animation: slideleft .5s ease-in forwards;
+  animation: slideleft .5s ease forwards;
 }
 
 .slide-right {
-  animation: slideright .5s ease-out forwards;
+  animation: slideright .5s ease forwards;
 }
 
 .slide-down{
@@ -122,9 +122,11 @@ body {
   header {
     justify-content:space-between;
     width: 100%;
-    height: 100px;
+    height: 60px;
+    padding: 0 15px 0 15px ;
+    position: static;
   }
-  
+
   .navbar {
     flex-direction: column;
     font-size: 14px;
@@ -135,34 +137,34 @@ body {
     z-index: 100;
     animation: none;
     overflow: hidden;
+    gap: 10;
+    padding-right: 0;
+    padding-top: 100px;
   }
-
   .navbar li{
     padding: 10px 0 10px 0;
-    border: 2px solid white;
+    border-bottom: 1px solid white;
     height: max-content;
+    padding-right: 0;
     width: 100%;
   }
-  .navbar li:hover{
-    height: fit-content;
-  }
-  .navbar a,.more_features,.projects {
-    width: 100%;
-    padding-left: 20px;
-    text-decoration: none;
-  }
-  .more_features div a {
-    padding: 5px;
+  .navbar li a,.more_features,.projects{
     font-size: 12px;
+    padding-left: 30px;
+    width: 100%;
+    text-align: left;
   }
-
+  .contact_us a{
+    padding-left: 20px !important;
+    margin: 0 !important;
+  }
   .companylogo {
     width: 50%;
-    height: 100%;
+    height: 95%;
   }
-
   .menu_button {
     font-size: 30px;
+    color: rgb(42, 38, 38);
   }
   .width50{
     width: 50%;
@@ -256,16 +258,33 @@ body {
     width: 45%;
     height: 300px;
   }
-
+  .logo{
+    height: 70px ;
+  }
+  .padding-down{
+    padding: 0 0 20px 0;
+  }
+  .textleft{
+    text-align: left;
+  }
+  .person_card{
+    flex-direction: row;
+  }
 }
 
-@media (width < 426px) {
+@media (width < 431px) {
   *{
     transition: 0.5s ease;
   }
   header{
-    gap: 150px;
     height: 50px;
+    padding: 0;
+  }
+  .navbar li a,.more_features,.projects{
+    font-size: 10px;
+    padding-left: 30px;
+    width: 100%;
+    text-align: left;
   }
   .menu_button {
     font-size: 20px;
@@ -273,20 +292,10 @@ body {
   .banner{
     height: 150px;
   }
-  .navbar a,.more_features {
-    padding: 8px;
-    padding-left: 15px;
-    font-size: 12px;
-    width: 100%;
-  }
-  .more_features div {
-    width: 80%;
-    left: 10;
-    background-color: rgb(235, 237, 244);
-  }
-  .more_features div a {
-    padding: 0 2px 0 2px;
-    font-size: 12px;
+  .companylogo {
+    padding: 0 !important;
+    width: 50%;
+    height: 95%;
   }
   .banner{
     height:280px;
@@ -300,16 +309,17 @@ body {
     width: 50%;
   }
   .width75{
-    width: 75%;
+    width: 75% !important;
   }
   .width90{
     width: 90%;
   }
+  
   .height50{
     height: 50%;
   }
   .height75{
-    height: 75%;
+    height: 75% !important;
   }
   .height90{
     height: 90% !important;
@@ -357,9 +367,27 @@ body {
   .promise-section{
     height: 310px !important;
   }
+  .logo{
+    height: 90px ;
+  }
+  .textleft{
+    text-align: left;
+  }
+  .padding-down{
+    padding: 0 0 20px 0;
+  }
+  .person_card{
+    flex-direction: row;
+  }
 }
 
 @media (width < 376px) {
+  .navbar li a,.more_features,.projects{
+    font-size: 10px;
+    padding-left: 30px;
+    width: 100%;
+    text-align: left;
+  }
   .width100{
     width: 100%;
   }
@@ -384,12 +412,16 @@ body {
   .height90{
     height: 90%;
   }
+  .hmax{
+    height: max-content;
+  }
   .team_section{
     width: 90% !important;
     height: 250px !important;
   }
   .core_value{
     height: 310px;
+    width: 90%;
   }
   .font6{
     font-size: 6px !important;
@@ -402,6 +434,9 @@ body {
   }
   .promise-section{
     height: 320px !important;
+  }
+  .footer_section{
+    width: 100% !important;
   }
 }
 
@@ -416,7 +451,7 @@ body {
   background-position: center;  
 }
 
-#about-us{
+#about{
   background-image: url("/images/construction-banner.png");
   background-size: cover;
   background-position: center;  
